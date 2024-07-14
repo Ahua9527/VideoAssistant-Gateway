@@ -6,9 +6,9 @@
 中文 | [English](./README_en.md) 
 
 ## 使用环境
-* [FFMpeg](https://ffmpeg.org) (A complete, cross-platform solution to record, convert and stream audio and videoe)
-* [NDI SDK](https://ndi.tv/sdk) (Thousands of products are enabling better experiences and unlocking new use cases by integrating NDI’s seamless, efficient, low-latency video connectivity technology.) 
-* [NDI-Python](https://github.com/buresu/ndi-python?tab=readme-ov-file) (NewTek NDI Python wrapper) 
+* [FFMpeg](https://ffmpeg.org) (一个完整的跨平台解决方案，用于录制、转换和流式传输音频和视频)
+* [NDI SDK](https://ndi.tv/sdk) (数以千计的产品正在通过集成NDI的无缝、高效、低延迟视频连接技术来实现更好的体验并解锁新的用例。) 
+* [NDI-Python](https://github.com/buresu/ndi-python?tab=readme-ov-file) (NewTek NDI Python库) 
 
 
 

@@ -60,7 +60,7 @@ while True:
 
 # 配置参数
 rtmp_server_address = "rtmp://你的RTMP服务器地址"
-stream_key = "你的流名称"
+stream_key = "你的流密钥"
 rtmp_server_url = f"{rtmp_server_address}/{stream_key}"
 video_resolution = f"{width}x{height}"
 frame_rate = str(framerate)
