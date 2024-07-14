@@ -1,2 +1,2 @@
 # VideoAssistant-Gateway
-The video assistant gateway is designed to help QTAKE (Reeltime Pro) operators achieve network interconnection at the network layer. The video assistant video gateway is a software that integrates core functions such as streaming media protocol conversion, streaming media distribution services, and multi-channel video encoding and decoding.
+视频助理网关就是帮助QTAKE（Reeltime Pro）操作员们在网络层上实现网络相互连接，视频助理视频网关是一款集流媒体协议转换、流媒体分发服务、多路视频编解码等核心功能于一体软件。

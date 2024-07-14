@@ -60,7 +60,7 @@ while True:
 
 # 配置参数
 rtmp_server_address = "rtmp://你的RTMP服务器地址"
-stream_key = "你的推流密钥"
+stream_key = "你的流名称"
 rtmp_server_url = f"{rtmp_server_address}/{stream_key}"
 video_resolution = f"{width}x{height}"
 frame_rate = str(framerate)
@@ -92,9 +92,12 @@ try:
         t, v, a, m = ndi.recv_capture_v2(recv_instance, timeout_in_ms=5000)
         if t == ndi.FRAME_TYPE_VIDEO:
             ffmpeg_process.stdin.write(v.data)
+except KeyboardInterrupt:
+    print("捕获到中断信号，正在停止...")
 finally:
     # 关闭NDI接收器
     ndi.recv_destroy(recv_instance)
     ndi.find_destroy(find_instance)
     ffmpeg_process.stdin.close()
     ffmpeg_process.wait()
+    print("FFmpeg进程已关闭，资源释放完成")

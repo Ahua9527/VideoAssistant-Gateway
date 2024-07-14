@@ -55,6 +55,7 @@ while True:
         width = v.xres
         height = v.yres
         framerate = round(v.frame_rate_N / v.frame_rate_D)
+        pixel_format = v.FourCC  # 获取NDI流的像素格式
         break
 
 # 配置参数
@@ -89,9 +90,12 @@ try:
         t, v, a, m = ndi.recv_capture_v2(recv_instance, timeout_in_ms=5000)
         if t == ndi.FRAME_TYPE_VIDEO:
             ffmpeg_process.stdin.write(v.data)
+except KeyboardInterrupt:
+    print("捕获到中断信号，正在停止...")
 finally:
     # 关闭NDI接收器
     ndi.recv_destroy(recv_instance)
     ndi.find_destroy(find_instance)
     ffmpeg_process.stdin.close()
     ffmpeg_process.wait()
+    print("FFmpeg进程已关闭，资源释放完成")
